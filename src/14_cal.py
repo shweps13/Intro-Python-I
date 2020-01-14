@@ -22,3 +22,32 @@ and does the following:
 import sys
 import calendar
 from datetime import datetime
+
+now = datetime.now()
+dt_string = now.strftime("%d/%m/%Y %H:%M:%S")
+print("============================")
+print("Today is", dt_string)	
+print("============================")
+
+c = calendar.TextCalendar(calendar.SUNDAY)
+def calend (m=None, y=None):
+  if m is None and y is None:
+     str = c.formatmonth(now.year, now.month)
+     print(str)
+  elif type(m) is not int or type(y) is not int:
+     print("Please, make sure that input data is correct")
+     print("You need to put month and year, like '5, 2017' for May 2017")
+  elif m <= 0 or m > 12:
+     print("Please, check format of the month")
+  elif type(m) is int and y is None:
+     str = c.formatmonth(now.year, m)
+     print(str)
+  elif y < 0:
+     print("Sorry, but year cannot be less than 0")
+  elif type(m) is int and type(y) is int:
+     str = c.formatmonth(y, m)
+     print(str)
+  else:
+     print("Please, make sure that input data is correct")
+
+calend(6, 2019)
