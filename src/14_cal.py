@@ -22,6 +22,10 @@ and does the following:
 import sys
 import calendar
 from datetime import datetime
+imon = input("Enter a month: ")
+imon = int(imon)
+iyear = input("Enter a year: ")
+iyear = int(iyear)
 
 now = datetime.now()
 dt_string = now.strftime("%d/%m/%Y %H:%M:%S")
@@ -50,4 +54,4 @@ def calend (m=None, y=None):
   else:
      print("Please, make sure that input data is correct")
 
-calend(6, 2019)
+calend(imon, iyear)
