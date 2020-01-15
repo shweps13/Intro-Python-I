@@ -40,7 +40,7 @@ def calend (m=None, y=None):
      print(str)
   elif type(m) is not int or type(y) is not int:
      print("Please, make sure that input data is correct")
-     print("You need to put month and year, like '5, 2017' for May 2017")
+     print("You need to put month and year, like '5' for [Month] and 2017 for [Year]' ==> to put May 2017")
   elif m <= 0 or m > 12:
      print("Please, check format of the month")
   elif type(m) is int and y is None:
@@ -55,3 +55,4 @@ def calend (m=None, y=None):
      print("Please, make sure that input data is correct")
 
 calend(imon, iyear)
+print("============================")
